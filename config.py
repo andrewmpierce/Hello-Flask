@@ -3,5 +3,5 @@ class Config(object):
     TESTING = False
     CSRF_ENABLED = True
     SECRET_KEY = 'password'
-    SQLALCHEMY_DATABASE_URI = "postgresql://apierce:password@localhost/hello_flask"
+    SQLALCHEMY_DATABASE_URI = "postgresql://hello_flask:password@localhost/hello_flask"
     SQLALCHEMY_TRACK_MODIFICATIONS = True
