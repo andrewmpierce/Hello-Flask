@@ -1,5 +1,4 @@
 from flask import Flask
-from flask import render_template
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.script import Manager
 from flask.ext.migrate import Migrate, MigrateCommand
@@ -47,11 +46,5 @@ class Tweet(db.Model):
     def __repr__(self):
         return '{} by {} at {}'.format(self.text, self.author, self.datetime)
 
-
-
-@app.route('/')
-def hello_world():
-    return render_template('hello.html', tweets = Tweet.query.all())
-
 if __name__ == '__main__':
-    app.run()
+    manager.run()
