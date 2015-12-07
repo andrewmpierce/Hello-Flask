@@ -39,7 +39,7 @@ class Tweet(db.Model):
 
 @app.route('/')
 def hello_world():
-    return render_template('hello.html')
+    return render_template('hello.html', tweets = Tweet.query.all())
 
 if __name__ == '__main__':
     app.run()

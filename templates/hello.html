@@ -10,8 +10,16 @@
 <p>Wow I rendered an HTML page!!! </p>
 
 
+{% if tweets %}
+{% for tweet in tweets %}
+{{ tweet.text }} says {{ tweet.user }}
 
+{% endfor %}
 
+{% else %}
+<p> There are no tweets! </p>
+
+{% endif %}
 
 
 
