@@ -9,6 +9,15 @@ class TestModels(unittest.TestCase):
         self.assertEqual(user.username, "Andrew")
         self.assertEqual(user.email, "andrew@andrew.com")
 
+    def test_tweet(self):
+        user = User("Andrew", "andrew@andrew.com")
+        tweet = Tweet("This is a tweet", user)
+        self.assertEqual(tweet.text, "This is a tweet")
+        self.assertEqual(tweet.author, user)
+
+class TestViews(unittest.TestCase):
+    
+
 
 
 
