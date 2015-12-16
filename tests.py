@@ -15,8 +15,11 @@ class TestModels(unittest.TestCase):
         self.assertEqual(tweet.text, "This is a tweet")
         self.assertEqual(tweet.author, user)
 
+
 class TestViews(unittest.TestCase):
-    
+    def test_hello_world(self):
+        pass
+
 
 
 
