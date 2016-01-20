@@ -10,7 +10,7 @@ app.config.from_object('config.Config')
 
 @app.route('/')
 def hello_world():
-    return render_template('hello.html', tweets = Tweet.query.all())
+    return render_template('hello.html')
 
 if __name__ == '__main__':
     app.run()
